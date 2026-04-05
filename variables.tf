@@ -54,13 +54,20 @@ variable "public_route_table_tags" {
     default = {}
     type = map
 }
-
-
 variable "private_route_table_tags" {
     default = {}
     type = map
 }
 variable "database_route_table_tags" {
+    default = {}
+    type = map
+}
+variable "eip_tags" {
+    default = {}
+    type = map
+}
+
+variable "nat_gateway_tags"  {
     default = {}
     type = map
 }
