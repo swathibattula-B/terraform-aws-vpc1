@@ -92,7 +92,6 @@ resource "aws_route_table" "database" {
         var.database_route_table_tags
   ) 
 }
-
 resource "aws_route" "pubilc" {
   route_table_id            = aws_route_table.public.id
   destination_cidr_block    = "0.0.0.0/0"
@@ -135,6 +134,5 @@ resource "aws_route" "private" {
 resource "aws_route" "database" {
   route_table_id            = aws_route_table.database.id
   destination_cidr_block    = "0.0.0.0/0"
-  nat_gateway_id = aws_nat_gateway_main.id
+  nat_gateway_id = aws__nat_gateway_main.id
 }
-
